@@ -21,6 +21,10 @@ func remove_cards(p_cards: Array[CardData]):
 	for card in p_cards:
 		card_datas.erase(card)
 	render_cards()
+	
+func clear():
+	card_datas = []
+	render_cards()
 
 # 类似react的渲染机制，由data控制视图
 func render_cards():

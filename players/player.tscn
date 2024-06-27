@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c85xsj85rlms6"]
+[gd_scene load_steps=7 format=3 uid="uid://c85xsj85rlms6"]
 
 [ext_resource type="Script" path="res://players/player.gd" id="1_q2k37"]
 [ext_resource type="PackedScene" uid="uid://28bggm66fesu" path="res://cards/cards.tscn" id="2_4r8ca"]
@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5edjg"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnjub"]
+size = Vector2(315, 98)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_q2k37")
@@ -26,3 +29,13 @@ texture = ExtResource("4_ogx1r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-458, 1)
 shape = SubResource("RectangleShape2D_5edjg")
+
+[node name="Area2D2" type="Area2D" parent="." groups=["player_card_area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_nnjub")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D2"]
+color = Color(0.498039, 0.596078, 0.760784, 0.760784)
+polygon = PackedVector2Array(-157, -100, 156, -99, 157, -1, -157, 0)
