@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfbfp5mmuekw4"]
+
+[ext_resource type="Script" path="res://game/play_area/play_area.gd" id="1_fs140"]
+[ext_resource type="PackedScene" uid="uid://28bggm66fesu" path="res://cards/cards.tscn" id="2_x0hdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_die7p"]
+size = Vector2(596, 317)
+
+[node name="PlayArea" type="Area2D"]
+script = ExtResource("1_fs140")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.311879, 0.631938, 0.612343, 1)
+polygon = PackedVector2Array(-282, -155, -282, 162, 318, 165, 311, -158)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 3.5)
+shape = SubResource("RectangleShape2D_die7p")
+
+[node name="Cards" parent="." instance=ExtResource("2_x0hdq")]
+position = Vector2(-1, 2)

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DamageEffect" load_steps=2 format=3 uid="uid://toywm6p70i7k"]
+
+[ext_resource type="Script" path="res://effects/damage_effect.gd" id="1_h615b"]
+
+[resource]
+script = ExtResource("1_h615b")
+damage = 8

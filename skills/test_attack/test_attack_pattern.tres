@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Pattern" load_steps=3 format=3 uid="uid://bfi8rc5ldqp67"]
+
+[ext_resource type="Script" path="res://pattern/pattern.gd" id="1_43bfp"]
+[ext_resource type="Resource" uid="uid://bfmednyam3x51" path="res://skills/test_attack/pattern_unit.tres" id="1_etpo4"]
+
+[resource]
+script = ExtResource("1_43bfp")
+pattern_unit_list = Array[Resource("res://pattern/pattern_unit.gd")]([ExtResource("1_etpo4")])

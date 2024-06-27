@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://beuaru1j2u887"]
+
+[ext_resource type="Texture2D" uid="uid://ba6f0nunobf5f" path="res://cards/h03/cards3.png" id="1_0n87i"]
+[ext_resource type="Script" path="res://cards/card_data.gd" id="1_ew8a2"]
+
+[resource]
+script = ExtResource("1_ew8a2")
+rank = 3
+suit = 1
+appreance = ExtResource("1_0n87i")

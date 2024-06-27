@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c85xsj85rlms6"]
+
+[ext_resource type="Script" path="res://players/player.gd" id="1_q2k37"]
+[ext_resource type="PackedScene" uid="uid://28bggm66fesu" path="res://cards/cards.tscn" id="2_4r8ca"]
+[ext_resource type="Resource" uid="uid://h6nvjulpydee" path="res://skills/test_attack/test_attack.tres" id="2_fmvdq"]
+[ext_resource type="Texture2D" uid="uid://ct62axeewp3cg" path="res://icon.svg" id="4_ogx1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5edjg"]
+size = Vector2(128, 128)
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_q2k37")
+skills = Array[Resource("res://skills/skill_card_data.gd")]([ExtResource("2_fmvdq")])
+
+[node name="Cards" parent="." instance=ExtResource("2_4r8ca")]
+
+[node name="SkillsPosition" type="Node2D" parent="."]
+position = Vector2(436, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-460, 2)
+texture = ExtResource("4_ogx1r")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-458, 1)
+shape = SubResource("RectangleShape2D_5edjg")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhjfotu83tt36"]
+
+[ext_resource type="Script" path="res://skills/skill_card.gd" id="1_wxyw0"]
+[ext_resource type="Texture2D" uid="uid://xab32tpp4btq" path="res://skills/deck.png" id="2_q2m5h"]
+
+[node name="SkillCard" type="Node2D"]
+script = ExtResource("1_wxyw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_q2m5h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 49.0
+offset_bottom = 65.0
+
+[node name="Title" type="Label" parent="Control"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "title"
+horizontal_alignment = 1
+
+[node name="Desc" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 40.0
+offset_bottom = 64.0
+text = "desc"

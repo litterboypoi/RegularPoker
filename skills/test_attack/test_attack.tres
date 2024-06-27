@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillCardData" load_steps=4 format=3 uid="uid://h6nvjulpydee"]
+
+[ext_resource type="Script" path="res://skills/skill_card_data.gd" id="1_apr57"]
+[ext_resource type="Resource" uid="uid://toywm6p70i7k" path="res://skills/test_attack/8_damage.tres" id="1_y5qfw"]
+[ext_resource type="Resource" uid="uid://bfi8rc5ldqp67" path="res://skills/test_attack/test_attack_pattern.tres" id="2_b6ppq"]
+
+[resource]
+script = ExtResource("1_apr57")
+title = "test attack"
+desc = "deal 10 damage"
+pattern = ExtResource("2_b6ppq")
+effects = Array[Resource("res://effects/effect.gd")]([ExtResource("1_y5qfw")])

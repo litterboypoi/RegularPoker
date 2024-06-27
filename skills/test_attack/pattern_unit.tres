@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PatternUnit" load_steps=4 format=3 uid="uid://bfmednyam3x51"]
+
+[ext_resource type="Script" path="res://pattern/pattern_unit.gd" id="1_1j4m4"]
+[ext_resource type="Script" path="res://pattern/pattern_base_units/pattern_rank_unit.gd" id="1_iicpq"]
+
+[sub_resource type="Resource" id="Resource_rp3hy"]
+script = ExtResource("1_iicpq")
+rank = 5
+
+[resource]
+script = ExtResource("1_1j4m4")
+pattern_base_unit = SubResource("Resource_rp3hy")
+quantifier = 0
